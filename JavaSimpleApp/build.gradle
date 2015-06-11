@@ -1,0 +1,9 @@
+apply plugin: "java"
+
+task starter(dependsOn: 'classes', type: JavaExec){
+   main = 'org.yazh.basic.SimpleApp'
+   classpath = sourceSets.main.runtimeClasspath
+   standardOutput= System.out
+}
+
+defaultTasks 'starter'
