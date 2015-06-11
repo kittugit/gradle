@@ -1,0 +1,21 @@
+apply plugin: 'java'
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    compile 'org.eclipse.jetty:jetty-server:9.3.0.RC1'
+    compile 'org.eclipse.jetty:jetty-servlet:9.3.0.RC1'    
+}
+ 
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+ 
+task runJetty( dependsOn: 'classes', type: JavaExec) {
+    main = 'org.yazh.embeded.jetty.ServletRunner'
+    classpath = sourceSets.main.runtimeClasspath
+
+}
+ 
+defaultTasks 'runJetty'
