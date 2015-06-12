@@ -1,0 +1,22 @@
+apply plugin: 'java'
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    compile 'org.apache.tomcat:tomcat-catalina:7.0.41'
+    compile 'org.apache.tomcat:tomcat-util:7.0.41'
+    compile 'org.apache.tomcat.embed:tomcat-embed-core:7.0.41'    
+}
+ 
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+ 
+task runTomcat( dependsOn: 'classes', type: JavaExec) {
+    main = 'org.yazh.embeded.tomcat.ServletRunner'
+    classpath = sourceSets.main.runtimeClasspath
+
+}
+ 
+defaultTasks 'runTomcat'
