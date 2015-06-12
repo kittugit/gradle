@@ -14,6 +14,6 @@ public class SimpleServlet extends HttpServlet {
 	@Override
 	protected void doGet(final HttpServletRequest req,
 			final HttpServletResponse res) throws ServletException, IOException {
-		res.getWriter().append(String.format("It's %s now\n\n\n\nwww.hascode.com", new Date()));
+		res.getWriter().append(String.format("It's %s now", new Date()));
 	}
 }
