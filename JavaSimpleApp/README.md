@@ -1,4 +1,3 @@
 Java Hello World
 ----
--compile
--run
+Compile and Run a simple java hello world program
