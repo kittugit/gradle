@@ -1,0 +1,8 @@
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:runTomcatTerminate batch job (Y/N)? 
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:runTomcatTerminate batch job (Y/N)? 
