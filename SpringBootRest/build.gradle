@@ -1,0 +1,24 @@
+apply plugin:"java"
+
+version=1.1
+repositories {
+	mavenCentral();
+}
+
+dependencies {
+  compile("org.springframework.boot:spring-boot-starter-web:1.2.5.RELEASE")
+
+}
+
+task starter(dependsOn: 'build', type: JavaExec){
+   main = 'org.yazh.rest.SampleController'
+   classpath = sourceSets.main.runtimeClasspath
+   standardOutput= System.out
+}
+
+task zip(type: Zip, dependsOn: 'build') {
+    from configurations.runtime
+	from jar.archivePath
+}
+
+defaultTasks 'starter'
